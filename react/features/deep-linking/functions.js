@@ -58,7 +58,7 @@ export function getDeepLinkingPage(state) {
     const OS = Platform.OS;
     const isUsingMobileBrowser = OS === 'android' || OS === 'ios';
 
-    if (isUsingMobileBrowser) { // mobile
+    if (!isUsingMobileBrowser) { // mobile
         const mobileAppPromo
             = typeof interfaceConfig === 'object'
                 && interfaceConfig.MOBILE_APP_PROMO;
